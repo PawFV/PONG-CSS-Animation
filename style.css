@@ -1,0 +1,100 @@
+*{box-sizing: border-box;}
+body{
+    background-color: #f1f1f1;
+    font-family: sans-serif,Arial, Helvetica;
+}
+.container{
+    margin: 50px auto;
+    background-color: white;
+    width: 430px;
+    height: 230px;
+    position:relative;
+}
+
+/* ANIMATION BALL*/ 
+.ball {
+    position:relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: red;
+    border: 1px solid black;
+    margin: auto;
+    right: 190px;
+    
+    animation-name: ball-anim;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes ball-anim{
+    /* Specify from to where, following same rules. */
+    /*  
+        TOP LEFT:  0|190
+        TOP RIGHT: 0|-190
+        BOT RIGHT: 200|-190
+        BOT LEFT: 200|190
+    */
+    0% {background-color: red; top:0; right:190px;} 
+    16.65% {background-color: blue; top:200px; right:-190px;}
+    33.33% {background-color: yellow; top:100px; right:190px;}
+    49.95% {background-color: green; top:0px; right:-190px;}
+    66.6% {background-color: rgb(255, 255, 255); top:200px; right:190px;}
+    83.25%{background-color: rgb(136, 80, 136); top:100px; right:-190px;}
+    100% {background-color: red; top:0; right:190px;}
+}
+/* PLAYERS */
+.player{
+    width:10px;
+    height: 30px;
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.player2{
+    right:0;
+    animation-name: player2-anim;
+}
+.player1{
+    animation-name: player1-anim;
+}
+/* ANIMATION PLAYERS */
+
+@keyframes player1-anim {
+    /*  
+        TOP:    top:0px;
+        MIDDLE: top:100px;
+        BOTTOM: top:200px;
+    */
+    0%     {top:0px;}
+    16.65% {top:200px;}
+    25%    {top:20px;}
+    33.33% {top: 100px;}
+    49.95% {top:0px;}
+    66.6%  {top:200px;}
+    72.5%  {top:0px;}
+    83.25% {top:150px;}
+    100%   {top:0px;}
+}
+
+@keyframes player2-anim{
+    /* 
+    TOP:    top:0px;
+    MIDDLE: top:100px;
+    BOTTOM: top:200px;
+    */
+    0%     {top:0px;}
+    16.65% {top:200px;}
+    33.33% {top: 0px;}
+    39%    {top:180px}
+    49.95% {top:0px;}
+    55.50% {top:40px;}
+    66.6%  {top:100px;}
+    72.8%  {top:0px;}
+    83.25% {top:100px;}
+    90%    {top:200px;}
+    100%   {top:0px;}
+}
