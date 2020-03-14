@@ -1,16 +1,40 @@
-*{box-sizing: border-box;}
+*{box-sizing: border-box;
+    transform:scale(0.89);
+}
 body{
     background-color: #f1f1f1;
     font-family: sans-serif,Arial, Helvetica;
+    margin:0;
+    width:100%;
 }
 .container{
-    margin: 50px auto;
+    position:relative;
+    margin:auto;
     background-color: white;
     width: 430px;
     height: 230px;
-    position:relative;
+    border: 1px solid rgba(0,0,0,0.8);
 }
 
+.title{
+    position:absolute;
+    margin:0;
+    color: rgba(0,0,0,0.2);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /*ANIMATE THE TITLE IF YOU WANT*/
+    /*animation: title 2s infinite;*/
+}
+
+
+@keyframes title {
+    0% {color: rgba(0,0,0,0.2);}
+    33% {color: rgba(0,0,0,0.3);}
+    66% {color: rgba(0,0,0,0.4);}
+    100% {color: rgba(0,0,0,0.2);}
+}
 /* ANIMATION BALL*/ 
 .ball {
     position:relative;
